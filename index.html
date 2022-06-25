@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vue NetNija</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <style></style>
+
+  <body>
+    <h1>Hello Vue!</h1>
+    <div id="app">
+      <p>{{title}} - {{author}} - {{age}}</p>
+
+      <button @click="age++">Increase Age</button>
+      <button @click="age--">Decrease Age</button>
+      <div @click="changeTitle('Outbringer')">Change Book Title</div>
+
+      <h3 v-show="isShown">Please toggle me! (v-show)</h3>
+      <h3 v-if="isShown">Please toggle me! (v-if)</h3>
+
+      <button @click="toggleShow">{{isShown ? 'Hide' : 'Show'}}</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
